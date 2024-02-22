@@ -2,7 +2,7 @@
 This is a indoor radar dataset. Researchers and practitioners can utilize this dataset for various applications, including but not limited to indoor mapping, localization, object detection, and activity recognition using radar sensing technology.
 
 ## SLAM
-
+![Animated GIF](img/CEME_f2.gif)
 ## Object Detection
 
 ## Dataset Usage Instruction
