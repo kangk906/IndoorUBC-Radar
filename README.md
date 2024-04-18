@@ -13,14 +13,31 @@ Each entry in the dataset includes radar scans capturing the layout and structur
 The dataset is provided in a structured format, with each data entry representing radar scans of various indoor environments within the UBC campus.
 ### Download
 ### Generate ImageSet
+This step will generate the ImageSet folder for training. You can use the ImageSet directly or generate it by yourself.
 ```
 python tools/gen_imgset.py --total_frames 5000 --train 0.6 --val 0.2 --test 0.2 --output home/downloads
 ```
 ### Generate the .npy file from the Lidar bag file
+This step will generate the points folder for training. 
 ```
 python tools/gen_npy.py --input home/downloads/lidar.bag --output home/downloads
 ```
 ### Generate the custom dataset for training using OpenPCDet
+First, you can combine points/labels folders from all buildings and generate the final points/labels folder.
+Files should be placed as the following folder structure:
+'''
+├── building_1
+│   ├── ImageSets
+│   │── points
+│   │── labels
+├── building_2
+├── ...
+├── building_n
+'''
+```
+python tools/gen_custom.py --input home/downloads/ --output home/downloads
+```
+Then, you can generate the data infos by running the following command:
 ```
 python -m pcdet.datasets.custom.custom_dataset create_custom_infos tools/cfgs/dataset_configs/custom_dataset.yaml
 ```
