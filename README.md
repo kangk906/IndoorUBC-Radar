@@ -20,12 +20,27 @@ python tools/gen_imgset.py --total_frames 5000 --train 0.6 --val 0.2 --test 0.2 
 ```
 python tools/gen_npy.py --input home/downloads/lidar.bag --output home/downloads
 ```
+### Generate the custom dataset for training using OpenPCDet
+```
+python -m pcdet.datasets.custom.custom_dataset create_custom_infos tools/cfgs/dataset_configs/custom_dataset.yaml
+```
 ## Signal Preprocessing Tools
 
 ### Point Cloud Map
 
 ### Objection Detection
+#### Train a new model using OpenPCDet
+```
+python train.py --cfg_file ${CONFIG_FILE}
+```
+Train with multiple GPUs or multiple machines
+```
+sh scripts/dist_train.sh ${NUM_GPUS} --cfg_file ${CONFIG_FILE}
 
+# or 
+
+sh scripts/slurm_train.sh ${PARTITION} ${JOB_NAME} ${NUM_GPUS} --cfg_file ${CONFIG_FILE}
+```
 ## Calibration
 ### Intrinsic Calibration
 
