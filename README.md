@@ -25,7 +25,7 @@ python tools/gen_npy.py --input home/downloads/lidar.bag --output home/downloads
 ### Generate the custom dataset for training using OpenPCDet
 First, you can combine points/labels folders from all buildings and generate the final points/labels folder.
 Files should be placed as the following folder structure:
-'''
+```
 ├── building_1
 │   ├── ImageSets
 │   │── points
@@ -33,7 +33,7 @@ Files should be placed as the following folder structure:
 ├── building_2
 ├── ...
 ├── building_n
-'''
+```
 ```
 python tools/gen_custom.py --input home/downloads/ --output home/downloads
 ```
