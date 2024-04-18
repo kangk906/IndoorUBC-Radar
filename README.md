@@ -13,9 +13,9 @@ Each entry in the dataset includes radar scans capturing the layout and structur
 The dataset is provided in a structured format, with each data entry representing radar scans of various indoor environments within the UBC campus.
 ### Download
 ### Generate ImageSet
-'''
+```
 python gen_imgset.py --total_frames 5000 --train 0.6 --val 0.2 --test 0.2 --output home/downloads
-'''
+```
 ## Signal Preprocessing Tools
 
 ### Point Cloud Map
