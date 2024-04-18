@@ -1,6 +1,6 @@
 # IndoorUBC-Radar
 This is a indoor radar dataset. Researchers and practitioners can utilize this dataset for various applications, including but not limited to indoor mapping, localization, object detection, and activity recognition using radar sensing technology.
-
+If you want to use MMWCAS-RF-EVM (1243) on Ubuntu, please refer to 
 ## SLAM
 ![Animated GIF](img/CEME_f2.gif)
 ## Object Detection
