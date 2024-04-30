@@ -15,12 +15,12 @@ The dataset is provided in a structured format, with each data entry representin
 ### Generate ImageSet
 This step will generate the ImageSet folder for training. You can use the ImageSet directly or generate it by yourself.
 ```
-python tools/gen_imgset.py --total_frames 5000 --train 0.6 --val 0.2 --test 0.2 --output home/downloads
+python3 tools/gen_imgset.py --total_frames 5000 --train 0.6 --val 0.2 --test 0.2 --output home/downloads
 ```
 ### Generate the .npy file from the Lidar bag file
-This step will generate the points folder for training. 
+This step will generate the npy points folder from all ros bag files in all folders under one directory for training. 
 ```
-python tools/gen_npy.py --input home/downloads/lidar.bag --output home/downloads
+python3 tools/bag2npy.py --directory_path /home/kk/Downloads/UBC_RADAR_INDOOR/
 ```
 ### Generate the custom dataset for training using OpenPCDet
 First, you can combine points/labels folders from all buildings and generate the final points/labels folder.
