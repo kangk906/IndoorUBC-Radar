@@ -15,7 +15,7 @@ The dataset is provided in a structured format, with each data entry representin
 ### Generate ImageSet
 This step will generate the ImageSet folder for training. You can use the ImageSet directly or generate it by yourself.
 ```
-python3 tools/gen_imgset.py --total_frames 5000 --train 0.6 --val 0.2 --test 0.2 --output home/downloads
+python3 tools/gen_imgset.py --total_frame 5000 --train 0.6 --val 0.2 --test 0.2 --output home/downloads
 ```
 ### Generate the .npy file from the Lidar bag file
 This step will generate the npy points folder from all ros bag files in all folders under one directory for training. 
