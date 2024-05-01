@@ -24,6 +24,9 @@ python3 tools/bag2npy.py --directory_path /home/kk/Downloads/UBC_RADAR_INDOOR/
 ```
 ### Generate the custom dataset for training using OpenPCDet
 First, you can combine points/labels folders from all buildings and generate the final points/labels folder.
+```
+python3 tools/gen_label.py --directory_path /home/kk/Downloads/UBC_RADAR_INDOOR/ --min_points 200 --min_distance 5
+```
 Files should be placed as the following folder structure:
 ```
 ├── building_1
